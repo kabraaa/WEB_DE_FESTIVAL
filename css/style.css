@@ -5,4 +5,54 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Imagen pantalla completa home */
+/* Menú sticky */
+.menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  width: 100%;
+  z-index: 1000;
+
+  /* Fondo con desenfoque */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.menu h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  display: flex;
+  gap: 80px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+/* Vídeo pantalla completa home */
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url();
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 2vh;
+}
