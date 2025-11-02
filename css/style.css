@@ -24,6 +24,7 @@
 .menu h1 {
   font-size: 30px;
   letter-spacing: 1px;
+  color: red;
 }
 
 .navbar {
@@ -44,15 +45,36 @@
 }
 
 /* Vídeo pantalla completa home */
-.hero-image {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url();
-  background-size: cover;
-  background-position: center;
+.hero-section {
   position: relative;
-  padding: 2vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  margin: 0 20px;
 }
