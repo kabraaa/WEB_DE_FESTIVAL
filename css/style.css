@@ -115,5 +115,43 @@ h1, h2 {
 
 .introduction p {
   font-weight: bold;
-  padding: 1rem 20rem 1rem 20rem;
+  padding: 1rem 20rem 1rem 20
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+.footer1 p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.footer1 p:hover {
+  color: red;
+}
+
+.footer2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 300px;
+}
+
+.footer2 p {
+  font-weight: bold;
+}
+
+.footer2 input[type="email"], .footer2 input[type="text"] {
+  background-color: white;
+  border: none;
+  height: 18px;
+  width: 100%;
 }
