@@ -264,3 +264,64 @@ h1, h2 {
 .logo h1:hover {
   transform: scale(1.2);
 }
+
+.origins-section {
+  padding: 80px 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.section-title {
+  font-size: 4rem;
+  margin-bottom: 60px;
+}
+
+/* Línea temporal */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  padding: 30px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* Línea separadora */
+.timeline-item::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: #585858;
+  margin: 30px auto 0 auto;
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item .content {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  position: relative;
+  text-align: left;
+}
+
+/* Imágenes */
+.timeline-item .content img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
