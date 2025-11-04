@@ -9,10 +9,9 @@ h1, h2 {
   font-family: "Anton"
 }
 
-/* INDEX */
 /* Menú sticky */
 .menu {
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -64,6 +63,7 @@ h1, h2 {
   font-weight: bold;
 }
 
+/* INDEX */
 /* Vídeo pantalla completa home */
 .hero-section {
   position: relative;
@@ -125,6 +125,7 @@ h1, h2 {
   color: white;
   padding: 40px 120px;
   font-size: 15px;
+  border-top: 1px solid white;
 }
 
 .footer-top {
@@ -274,6 +275,7 @@ h1, h2 {
   text-align: center;
   background-color: black;
   color: white;
+  padding-top: 200px;
 }
 
 .section-title {
@@ -353,6 +355,13 @@ h1, h2 {
   margin-left: -2px;
 }
 
+.final-phrase {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 80px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1000px) {
   .timeline {
     display: flex;
@@ -398,3 +407,4 @@ h1, h2 {
     margin: 50px auto 0 auto;
   }
 }
+
