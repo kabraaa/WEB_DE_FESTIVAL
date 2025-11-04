@@ -273,8 +273,8 @@ h1, h2 {
 .origins-section {
   padding: 80px 100px;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding-top: 200px;
 }
 
@@ -302,7 +302,7 @@ h1, h2 {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   margin: 50px auto 0 auto;
 }
 
@@ -315,7 +315,7 @@ h1, h2 {
 }
 
 .timeline-item .content {
-  background-color: #222;
+  background-color: #e4e4e4;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -357,9 +357,9 @@ h1, h2 {
 
 .final-phrase {
   text-align: center;
-  font-size: 1.5rem;
-  margin-top: 80px;
-  text-transform: uppercase;
+  margin-top: 100px;
+  font-size: 1.3rem;
+  font-style: italic;
 }
 
 @media (max-width: 1000px) {
@@ -408,3 +408,117 @@ h1, h2 {
   }
 }
 
+
+
+
+
+
+
+
+
+/* AUTHORS */
+.authors-section {
+  text-align: center;
+  padding: 200px 60px;
+
+}
+
+.authors-section h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.intro {
+  margin-bottom: 60px;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.author-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.author-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.author-card .overlay {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 1;
+  transition: background 0.4s ease;
+}
+
+.author-card .overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.author-card .overlay p {
+  font-size: 1rem;
+  line-height: 1.4;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.4s ease;
+}
+
+.author-card:hover img {
+  transform: scale(1.1);
+}
+
+.author-card:hover .overlay {
+  background: rgba(0, 0, 0, 0.7)
+}
+
+.author-card:hover .overlay p {
+  opacity: 1;
+}
+
+.closing-phrase {
+  margin-top: 100px;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+@media (max-width:800px) {
+  .authors-section h2 {
+    font-size: 2rem;
+  }
+
+  .closing-phrase {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1420px) {
+  .authors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .authors-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
