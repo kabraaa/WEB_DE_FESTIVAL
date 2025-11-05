@@ -75,3 +75,11 @@ document.querySelectorAll('.navbar a').forEach(link =>
     navBar.classList.remove('active');
   })
 );
+
+const currentPage = window.location.pathname.split('/').pop(); // obtiene el archivo actual (ej: origins.html)
+document.querySelectorAll('.navbar a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === currentPage) {
+    link.classList.add('active-link');
+  }
+});
