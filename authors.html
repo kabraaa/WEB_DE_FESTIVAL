@@ -108,7 +108,7 @@
                  <div class="legend-card"
                     data-name="Lady Pink"
                     data-info="One of the first women to rise in the male-dominated graffiti scene, Lady Pink became a symbol of empowerment and creativity."
-                    data-image="media/images/l1.webp">
+                    data-image="media/images/l3.webp">
                     <img src="media/images/l3.webp" alt="Lady Pink">
                  </div>
 
@@ -181,5 +181,67 @@
         </div>
     </footer>
 
+    <!-- JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+        const legendCards = document.querySelectorAll('.legend-card');
+
+        const modal = document.createElement('div');
+        modal.id = 'legendModal';
+        modal.innerHTML = `
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <span class="close-modal" aria-label="Close modal">&times;</span>
+            <img src="" alt="" />
+            <h3 id="modalTitle"></h3>
+            <p></p>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        const modalImg = modal.querySelector('img');
+        const modalName = modal.querySelector('h3');
+        const modalInfo = modal.querySelector('p');
+        const closeModalBtn = modal.querySelector('.close-modal');
+
+        if (!legendCards || legendCards.length === 0) return;
+
+        legendCards.forEach(card => {
+            card.addEventListener('click', () => {
+            const name = card.getAttribute('data-name') || '';
+            const info = card.getAttribute('data-info') || '';
+            const image = card.getAttribute('data-image') || card.querySelector('img')?.src || '';
+
+            modalImg.src = image;
+            modalImg.alt = name;
+            modalName.textContent = name;
+            modalInfo.textContent = info;
+
+            modal.classList.add('show');
+
+            document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+            }
+        });
+        });
+    </script>
 </body>
 </html>

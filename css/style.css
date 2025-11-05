@@ -180,6 +180,7 @@ h1, h2 {
 
 .footer2 button {
   background-color: #ff0000;
+  border-radius: 3px;
   color: rgb(255, 255, 255);
   border: none;
   padding: 4px 15px;
@@ -501,10 +502,6 @@ h1, h2 {
 }
 
 @media (max-width:800px) {
-  .authors-section h2 {
-    font-size: 2rem;
-  }
-
   .closing-phrase {
     font-size: 1.1rem;
   }
@@ -526,7 +523,7 @@ h1, h2 {
 /* HIP HOP LEGENDS */
 .hiphop-legends {
   text-align: center;
-  padding: 120px 60px;
+  padding: 60px;
 }
 
 .hiphop-legends h2 {
@@ -540,6 +537,7 @@ h1, h2 {
 }
 
 .legends-grid {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   justify-content: center;
@@ -593,11 +591,10 @@ h1, h2 {
 
 .legend-card:hover img {
   transform: scale(1.1);
-  filter: grayscale(0%);
 }
 
 .legend-card:hover::after {
-  opacity: 0.8;
+  color: red;
 }
 
 #legendModal {
@@ -609,6 +606,7 @@ h1, h2 {
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
+  padding: 20px;
 }
 
 #legendModal.show {
@@ -662,4 +660,22 @@ h1, h2 {
 @keyframes popIn {
   from { transform: scale(0.8); opacity: 0;}
   to { transform: scale(1); opacity: 1;}
+}
+
+@media (max-width: 900px) {
+  .modal-content {
+    max-width: 450px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    max-width: 350px;
+    padding: 25px;
+  }
+
+  .modal-content img {
+    margin-bottom: 15px;
+  }
 }
