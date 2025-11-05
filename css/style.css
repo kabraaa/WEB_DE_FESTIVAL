@@ -63,6 +63,74 @@ h1, h2 {
   font-weight: bold;
 }
 
+
+
+
+
+/* MENÚ HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 850px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: black;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    gap: 25px;
+    padding: 30px 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  .navlinks.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+
+
+
+
 /* INDEX */
 /* Vídeo pantalla completa home */
 .hero-section {
