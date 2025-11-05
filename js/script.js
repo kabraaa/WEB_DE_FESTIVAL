@@ -1,3 +1,4 @@
+// HIP HOP LEGENDS
 // Selecciona todos los personajes
 const legendCards = document.querySelectorAll('.legend-card');
 const modal = document.createElement('div');
@@ -60,17 +61,17 @@ window.addEventListener('keydown', e => {
 
 
 // MENÚ DE HAMBURGUESA
-const hamburger = document.querySelector('.hamburguer');
-const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const navBar = document.querySelector('.navbar');
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  navBar.classList.toggle('active');
 });
 
-document.querySelectorAll('.nav-links a').forEach(link =>
+document.querySelectorAll('.navbar a').forEach(link =>
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
+    navBar.classList.remove('active');
   })
 );
