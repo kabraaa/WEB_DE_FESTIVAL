@@ -189,6 +189,7 @@ h1, h2 {
   align-items: center;
   text-align: center;
   z-index: 1;
+  flex-direction: column;
 }
 
 .hero-content h1 {
@@ -197,6 +198,13 @@ h1, h2 {
   font-weight: bold;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   margin: 0 20px;
+}
+
+.hero-content p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
 .introduction {
