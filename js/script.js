@@ -83,3 +83,37 @@ document.querySelectorAll('.navbar a').forEach(link => {
     link.classList.add('active-link');
   }
 });
+
+
+
+
+
+// MODO CLARO / OSCURO
+const btnSwitchMode = document.querySelector(".theme-switch");
+const toDark = document.querySelector(".to-dark-mode");
+const toLight = document.querySelector(".to-light-mode");
+const body = document.querySelector("body");
+
+// Cargar el modo guardado
+if (localStorage.getItem("theme")==="dark") {
+  body.classList.add("dark-theme");
+  toDark.classList.add("hide-cont");
+  toLight.classList.remove("hide-cont");
+}
+
+btnSwitchMode.addEventListener("click", () => {
+  const isDark = body.classList.contains("dark-theme");
+
+  toDark.classList.toggle("hide-cont");
+  toLight.classList.toggle("hide-cont");
+
+  if (isDark) {
+    body.classList.remove("dark-theme");
+    body.classList.add("light-theme");
+    localStorage.setItem("theme", "light");
+  } else {
+    body.classList.remove("light-theme");
+    body.classList.add("dark-theme");
+    localStorage.setItem("theme", "dark");
+  }
+});
