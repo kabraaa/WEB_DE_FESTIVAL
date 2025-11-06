@@ -38,7 +38,7 @@ h1, h2 {
   bottom: 30px;
   right: 30px;
   background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur (50px);
+  backdrop-filter: blur(50px);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -58,10 +58,6 @@ h1, h2 {
 .hide-cont {
   display: none;
 }
-
-
-
-
 
 body.dark-theme {
   background-color: black;
@@ -131,6 +127,29 @@ body.dark-theme .timeline-item::before {
   background-color: red;
 }
 
+
+body.light-theme {
+  background-color: white;
+  color: black;
+}
+
+body.light-theme .menu {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+body.light-theme .navbar a {
+  color: black;
+}
+
+body.light-theme .navbar a:hover {
+  color: red;
+}
+
+body.light-theme .footer {
+  background-color: black;
+  color: white;
+  border-top: 1px solid white;
+}
 
 /* Menú sticky */
 .menu {

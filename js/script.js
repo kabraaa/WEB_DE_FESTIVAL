@@ -25,16 +25,8 @@ const legendCards = document.querySelectorAll('.legend-card');
 const modal = document.createElement('div');
 
 // Crea estructura modal
-// modal.id = 'legendModal';
-// modal.innerHTML = `
-//   <div class="modal-content">
-//     <span class="close-modal">&times;</span>
-//     <img src="" alt="">
-//     <h3></h3>
-//     <p></p>
-//   </div>
-// `;
-// document.body.appendChild(modal);
+
+document.body.appendChild(modal);
 
 // Referencias internas
 const modalImg = modal.querySelector('img');
