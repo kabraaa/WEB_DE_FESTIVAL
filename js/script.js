@@ -1,19 +1,40 @@
-// HIP HOP LEGENDS
+// PANTALLA DE CARGA
+var contador = 0;
+
+function carga() {
+    if (contador <= 100) {
+        document.getElementById("porcentaje").innerHTML = contador + "%";
+        contador = contador + 1;
+        setTimeout(carga, 50);
+    } else {
+        document.getElementById("carga").style.top = "-100%";
+    }
+}
+
+window.onload = function () {
+    carga();
+}
+
+
+
+
+
+// VENTANAS MODALES HIP HOP LEGENDS
 // Selecciona todos los personajes
 const legendCards = document.querySelectorAll('.legend-card');
 const modal = document.createElement('div');
 
 // Crea estructura modal
-modal.id = 'legendModal';
-modal.innerHTML = `
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <img src="" alt="">
-    <h3></h3>
-    <p></p>
-  </div>
-`;
-document.body.appendChild(modal);
+// modal.id = 'legendModal';
+// modal.innerHTML = `
+//   <div class="modal-content">
+//     <span class="close-modal">&times;</span>
+//     <img src="" alt="">
+//     <h3></h3>
+//     <p></p>
+//   </div>
+// `;
+// document.body.appendChild(modal);
 
 // Referencias internas
 const modalImg = modal.querySelector('img');
