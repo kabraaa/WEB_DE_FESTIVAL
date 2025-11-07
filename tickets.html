@@ -41,10 +41,44 @@
         </div>
     </header>
 
+    <main>
+        <section class="tickets-section fade up">
+            <h2 class="section-title">GET YOUR PASS.</h2>
+            <p class="tickets-intro>">Choose your ticket and join the movement.</p>
 
+            <form class="ticket-form" id="tickets-form">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="John Hudson" required>
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john23@gmail.com" required>
 
-    
+                <h3>Select your passes</h3>
+
+                <div class="ticket-type">
+                    <label>🎧 Street Pass <span>- 5€</span></label>
+                    <input type="number" name="street" min="0" max="10" value="0">
+                </div>
+
+                <div class="ticket-type">
+                    <label>🎤 Block Party Pass <span>- 10€</span></label>
+                    <input type="number" name="block" min="0" max="10" value="0">
+                </div>
+
+                <div class="ticket-type">
+                    <label>🎨 Graffiti Master Pass <span>- 15€</span></label>
+                    <input type="number" name="graffiti" min="0" max="10" value="0">
+                </div>
+
+                <div class="price-display">
+                    <p>Total: <span id="ticket-price">0€</span></p>
+                </div>
+
+                <button type="submit" class="buy-btn">BUY NOW</button>
+            </form>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
