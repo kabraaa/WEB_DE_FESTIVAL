@@ -1,6 +1,4 @@
-// ==========================================================
 // MENÚ HAMBURGUESA
-// ==========================================================
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 
@@ -11,9 +9,7 @@ if (hamburger && navbar) {
   });
 }
 
-// ==========================================================
 // MODO CLARO / OSCURO
-// ==========================================================
 const btnSwitchMode = document.querySelector(".theme-switch");
 const toDark = document.querySelector(".to-dark-mode");
 const toLight = document.querySelector(".to-light-mode");
@@ -42,9 +38,7 @@ btnSwitchMode?.addEventListener("click", () => {
   }
 });
 
-// ==========================================================
-// TICKETS MULTIPLE SELECTION
-// ==========================================================
+// TICKETS
 document.addEventListener("DOMContentLoaded", () => {
   const prices = {
     street: 5,
