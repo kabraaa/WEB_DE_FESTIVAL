@@ -10,16 +10,35 @@ h1, h2 {
 }
 
 /* VARIABLES */
+/* Modo claro */
 :root {
   --bg-color:white;
   --text-color: black;
   --accent-color:red;
-  --timeline-bg: red;
+  --timeline-bg: #e4e4e4;
 
   --menu-bg: rgba(255, 255, 255, 0.9);
+  --menu-text: black;
+  --menu-icon: black;
 }
 
-/* Menú sticky */
+/* Modo oscuro */
+body.dark-theme {
+  --bg-color: black;
+  --text-color: white;
+  --accent-color:red;
+  --timeline-bg: #2a2a2a;
+
+  --menu-bg: rgba(0, 0, 0, 0.9);
+  --menu-text: white;
+  --menu-icon: white;
+}
+
+
+
+
+
+/* MENÚ STICKY */
 .menu {
   position: fixed;
   top: 0;
@@ -106,7 +125,7 @@ h1, h2 {
 .hamburger span {
   height: 3px;
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: var(--menu-icon);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -116,7 +135,7 @@ h1, h2 {
     position: absolute;
     top: 90px;
     right: 5px;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--menu-bg);
     flex-direction: column;
     align-items: center;
     width: 200px;
@@ -130,6 +149,15 @@ h1, h2 {
     transition: all 0.4s ease;
   }
 
+  .navbar a {
+    color: var(--menu-text);
+  }
+
+  .navbar a:hover,
+  .navbar a.active-link {
+    color: var(--accent-color);
+  }
+
   .navbar.active {
     opacity: 1;
     transform: translateY(0);
@@ -141,7 +169,7 @@ h1, h2 {
   }
 
   .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
+    transform: rotate(45deg) translateY(10px);
   }
 
   .hamburger.active span:nth-child(2) {
@@ -149,7 +177,7 @@ h1, h2 {
   }
 
   .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
+    transform: rotate(-45deg) translateY(-10px);
   }
 }
 
@@ -389,8 +417,8 @@ h1, h2 {
 .origins-section {
   padding: 80px 100px;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding-top: 200px;
 }
 
